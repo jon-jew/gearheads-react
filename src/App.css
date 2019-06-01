@@ -1,3 +1,8 @@
+body{
+  background-color: #474747;
+  font-family: Poppins;
+}
+
 .App {
   text-align: center;
 }
@@ -21,6 +26,71 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.menu-item{
+  font-family: Overpass;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #FFF;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.bmBurgerButton{
+  z-index: 1000;
+}
+
+.navbar{
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 100;
+  background: #ada795;
+  margin-bottom: 100px;
+}
+
+#title{
+  color: #474747;
+  font-family: Pacifico;
+  font-size: 30pt;
+  font-weight: 200;
+  margin-top: 0px;
+}
+
+.card-container{
+  padding-top: 100px;
+}
+
+.card{
+  background: #565656;
+  width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  margin: 10px;
+  outline: none;
+}
+
+.card-photo{
+  width: 100%;
+  height: 400px;
+  background: #666666;
+}
+
+.car-photo{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.car-title{
+  color: #FFF;
+  font-family: Overpass;
+  letter-spacing: 4px;
+  font-weight: 900;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18pt;
 }
 
 @keyframes App-logo-spin {
