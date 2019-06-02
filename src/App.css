@@ -11,10 +11,11 @@ body{
 .menu-item{
   font-family: Overpass;
   font-weight: 600;
+  text-align: left;
   letter-spacing: 1px;
   color: #FFF;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 15px;
   outline: none;
   transition-property: color;
   transition-property: font-size;
@@ -24,6 +25,11 @@ body{
 .menu-item:hover{
   color: #474747;
   font-size: 15pt;
+}
+
+.list-icon{
+  margin-right: 20px;
+  width: 10px;
 }
 
 .bmBurgerButton{

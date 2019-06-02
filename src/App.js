@@ -44,11 +44,26 @@ function Home() {
   );
 }
 
+function Explore(){
+  return(
+    <div className = "App">
+      <div id="outer-container">
+        <Sidebar />
+        <main id="page-wrap">
+        <Navbar />
+
+        </main>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
         <Route path="/" exact component={Home} />
         <Route path="/marketplace/" exact component={marketplace} />
+        <Route path="/explore/" exact component={Explore} />
     </Router>
   );
 }
@@ -76,10 +91,10 @@ class Sidebar extends React.Component {
   render () {
     return (
       <Menu id = "sidebar" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } styles={ styles }>
-          <Link to="/" id="home" className="menu-item">HOME</Link>
-          <Link to="/marketplace/" id="marketplace" className="menu-item">MARKETPLACE</Link>
-          <Link to="/explore/" id="explore" className="menu-item">EXPLORE</Link>
-          <Link to="/garage/" id="my-garage" className="menu-item">MY GARAGE</Link>
+          <Link to="/" id="home" className="menu-item"><i class="list-icon fas fa-home"></i> HOME</Link>
+          <Link to="/marketplace/" id="marketplace" className="menu-item"><i class="list-icon fas fa-coins"></i> MARKETPLACE</Link>
+          <Link to="/explore/" id="explore" className="menu-item"><i class="list-icon fas fa-binoculars"></i> EXPLORE</Link>
+          <Link to="/garage/" id="my-garage" className="menu-item"><i class="list-icon fas fa-warehouse"></i> MY GARAGE</Link>
       </Menu>
     );
   }
@@ -100,6 +115,18 @@ class MarketplaceSidebar extends React.Component{
 }
 
 class CarCard extends React.Component{
+
+  render(){
+    return(
+      <div class = "card">
+        <div class = "card-photo"><img class="car-photo" src={this.props.pic}/></div>
+        <div class = "car-title">{this.props.car}</div>
+      </div>
+    )
+  }
+}
+
+class MarketCard extends React.Component{
 
   render(){
     return(
