@@ -15,7 +15,9 @@ function marketplace() {
         <Sidebar />
         <main id="page-wrap">
         <Navbar />
-
+        <div class = "marketplace-box">
+          <div class = "marketplace-title">MARKETPLACE</div>
+        </div>
         </main>
       </div>
     </div>
