@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import pic from './mr2.jpg';
 import pic2 from './download.jpg';
+import searchIcon from './search-solid.svg'
 import './App.css';
 import { push as Menu } from 'react-burger-menu'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -13,10 +14,13 @@ function marketplace() {
     <div className = "App">
       <div id="outer-container">
         <Sidebar />
+        <MarketplaceSidebar />
         <main id="page-wrap">
         <Navbar />
         <div class = "marketplace-box">
+
           <div class = "marketplace-title">MARKETPLACE</div>
+
         </div>
         </main>
       </div>
@@ -38,19 +42,6 @@ function Home() {
 
   );
 }
-
-function getLocation(){
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
-
-function showPosition(position) {
-  var location = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
-  return location;
-}
-
-getLocation();
-
 
 function App() {
   return (
@@ -84,11 +75,27 @@ class Sidebar extends React.Component {
   render () {
     return (
       <Menu id = "sidebar" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } styles={ styles }>
-          <Link to="/" id="home" className="menu-item" href="/">HOME</Link>
-          <Link to="/marketplace/" id="about" className="menu-item" href="/about">MARKETPLACE</Link>
-          <a id="contact" className="menu-item" href="/contact">EXPLORE</a>
+          <Link to="/" id="home" className="menu-item">HOME</Link>
+          <Link to="/marketplace/" id="marketplace" className="menu-item">MARKETPLACE</Link>
+          <Link to="/explore/" id="explore" className="menu-item">EXPLORE</Link>
+          <Link to="/garage/" id="my-garage" className="menu-item">MY GARAGE</Link>
       </Menu>
     );
+  }
+}
+
+class MarketplaceSidebar extends React.Component{
+  showSettings (event){
+    event.preventDefault();
+
+  }
+
+  render(){
+    return(
+      <Menu right id = "marketplace-search" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } customBurgerIcon={ <img src={searchIcon} /> } styles={ styles2 }>
+
+      </Menu>
+    )
   }
 }
 
@@ -116,7 +123,53 @@ class Navbar extends React.Component{
   }
 }
 
+
+
 export default App;
+
+var styles2 = {
+  bmBurgerButton: {
+    position: 'fixed',
+    width: '36px',
+    height: '30px',
+    right: '36px',
+    top: '25px'
+  },
+  bmBurgerBars: {
+    background: '#373a47'
+  },
+  bmBurgerBarsHover: {
+    background: '#a90000'
+  },
+  bmCrossButton: {
+    height: '24px',
+    width: '24px'
+  },
+  bmCross: {
+    background: '#bdc3c7'
+  },
+  bmMenuWrap: {
+    position: 'fixed',
+    height: '100%'
+  },
+  bmMenu: {
+    background: '#ada795',
+    padding: '2.5em 1.5em 0',
+    fontSize: '1.15em',
+    overflow: 'hidden'
+  },
+  bmMorphShape: {
+    fill: '#373a47'
+  },
+  bmItemList: {
+    color: '#b8b7ad',
+    padding: '0.8em'
+  },
+
+  bmOverlay: {
+    background: 'rgba(0, 0, 0, 0.3)'
+  }
+}
 
 var styles = {
   bmBurgerButton: {
