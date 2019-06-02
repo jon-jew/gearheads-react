@@ -47,6 +47,10 @@ body{
   margin-top: 0px;
 }
 
+/*
+-----------------------------------CAR CARD--------------------------
+*/
+
 .card-container{
   padding-top: 100px;
 }
@@ -89,7 +93,7 @@ body{
 }
 
 /*
-marketplace
+-----------------------------------MARKETPLACE--------------------------
 */
 .marketplace-box{
   padding-top: 90px;
@@ -106,4 +110,24 @@ marketplace
   letter-spacing: 5px;
   font-size: 20pt;
   height: 50px;
+}
+
+/*
+-----------------------------------MARKETPLACE SEARCH--------------------------
+*/
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+}
+
+.market-searchbox{
+  font-family: Overpass;
+  width: 80%;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px;
+  background-color: #565656;
+  color: #FFF;
 }

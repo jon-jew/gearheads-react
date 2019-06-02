@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import pic from './mr2.jpg';
 import pic2 from './download.jpg';
 import searchIcon from './search-solid.svg'
+import SearchForm from './MarketSearch.js'
 import './App.css';
 import { push as Menu } from 'react-burger-menu'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -87,13 +88,12 @@ class Sidebar extends React.Component {
 class MarketplaceSidebar extends React.Component{
   showSettings (event){
     event.preventDefault();
-
   }
 
   render(){
     return(
       <Menu right id = "marketplace-search" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } customBurgerIcon={ <img src={searchIcon} /> } styles={ styles2 }>
-
+        <SearchForm />
       </Menu>
     )
   }
