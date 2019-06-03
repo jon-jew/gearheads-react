@@ -1,6 +1,6 @@
 body{
   background-color: #474747;
-  font-family: Poppins;
+  font-family: Lato;
 }
 
 .App {
@@ -62,7 +62,9 @@ body{
 }
 
 .card{
-  background: #565656;
+  background: #e8e5e5;
+  color: #474747;
+  border-radius: 10px;
   width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: inline-block;
@@ -78,24 +80,44 @@ body{
 
 .card-photo{
   width: 100%;
+  border-radius: 10px;
   height: 400px;
-  background: #666666;
+
 }
 
 .car-photo{
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .car-title{
-  color: #FFF;
-  font-family: Overpass;
+  font-family: Poppins;
+  font-weight: 700;
   letter-spacing: 4px;
-  font-weight: 900;
+  font-weight: 700;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 18pt;
+  text-align: left;
+  line-height: 21px;
+  padding-left: 5px;
+
+}
+
+.car-year{
+  font-family: Poppins;
+  font-weight: 200;
+}
+
+.car-user{
+  font-family: Poppins;
+  font-weight: 200;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: -25px;
 }
 
 /*

@@ -4,6 +4,7 @@ import pic from './mr2.jpg';
 import pic2 from './download.jpg';
 import searchIcon from './search-solid.svg'
 import SearchForm from './MarketSearch.js'
+import GarageTabs from './garage.js'
 import './App.css';
 import { push as Menu } from 'react-burger-menu'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -88,11 +89,12 @@ class CarCardContainer extends React.Component{
   render(){
     return(
       <div class = "card-container">
-        <CarCard car={"2003 NISSAN 350Z"} pic={pic2}/>
-        <CarCard car={"1991 TOYOTA MR2"} pic={pic}/>
-        <CarCard car={"2003 NISSAN 350Z"} pic={pic2}/>
-        <CarCard car={"1991 TOYOTA MR2"} pic={pic}/><CarCard car={"2003 NISSAN 350Z"} pic={pic2}/>
-        <CarCard car={"1991 TOYOTA MR2"} pic={pic}/>
+        <CarCard year={"2003"} car={"NISSAN 350Z"} pic={pic2}/>
+        <CarCard year={"1991"} car={"TOYOTA MR2"} pic={pic}/>
+        <CarCard year={"2003"} car={"NISSAN 350Z"} pic={pic2}/>
+        <CarCard year={"1995"} car={"TOYOTA MR2"} pic={pic}/>
+        <CarCard year={"2003"} car={"NISSAN 350Z"} pic={pic2}/>
+        <CarCard year={"1994"} car={"TOYOTA MR2"} pic={pic}/>
       </div>
     )
   }
@@ -136,7 +138,8 @@ class CarCard extends React.Component{
     return(
       <div class = "card">
         <div class = "card-photo"><img class="car-photo" src={this.props.pic}/></div>
-        <div class = "car-title">{this.props.car}</div>
+        <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}</div>
+        <div class = "car-user"><i class="fas fa-user"></i> USERNAME</div>
       </div>
     )
   }
