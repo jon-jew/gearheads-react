@@ -5,6 +5,7 @@ import pic2 from './download.jpg';
 import searchIcon from './search-solid.svg'
 import SearchForm from './MarketSearch.js'
 import GarageTabs from './garage.js'
+
 import './App.css';
 import { push as Menu } from 'react-burger-menu'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -24,7 +25,7 @@ function marketplace() {
           <div class = "marketplace-title">MARKETPLACE</div>
 
         </div>
-        <MarketCard />
+        <MarketCard year={"1991"} car={"TOYOTA MR2"} pic={pic} />
         </main>
       </div>
     </div>
@@ -38,6 +39,7 @@ function Home() {
         <Sidebar />
         <main id="page-wrap">
         <Navbar />
+
         <CarCardContainer />
         </main>
       </div>
@@ -54,6 +56,7 @@ function Explore(){
         <main id="page-wrap">
         <Navbar />
         <div class = "card-container">
+
           <ManufacturerCard manu={"ACURA"} />
           <ManufacturerCard manu={"ACURA"} />
           <ManufacturerCard manu={"ACURA"} />
@@ -154,8 +157,10 @@ class MarketCard extends React.Component{
   render(){
     return(
       <div class = "card">
+        <div class = "car-price">$8000</div>
         <div class = "card-photo"><img class="car-photo" src={this.props.pic}/></div>
-        <div class = "car-title">{this.props.car}</div>
+        <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}</div>
+        <div class = "market-info car-user "><i class="fas fa-tachometer-alt"></i> 110000 MILES<br /><i class="fas fa-map-marker-alt"></i> LOCATION</div>
       </div>
     )
   }

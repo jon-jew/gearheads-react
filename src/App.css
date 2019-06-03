@@ -64,6 +64,7 @@ body{
 .card{
   background: #e8e5e5;
   color: #474747;
+  position: relative;
   border-radius: 10px;
   width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -82,7 +83,7 @@ body{
 .card-photo{
   width: 100%;
   border-radius: 10px;
-  height: 400px;
+  height: 250px;
 
 }
 
@@ -96,11 +97,10 @@ body{
 
 .car-title{
   font-family: 'Overpass', sans-serif;
-  letter-spacing: 4px;
   font-weight: 900;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 18pt;
+  font-size: 20pt;
   text-align: left;
   line-height: 21px;
   padding-left: 10px;
@@ -131,15 +131,35 @@ body{
 
 .marketplace-title{
   padding-top: 10px;
+  padding-left: 20px;
   background-color: #565656;
   color: #ada795;
-  font-family: Overpass;
-  font-weight: 900;
-  letter-spacing: 5px;
-  font-size: 20pt;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+
+  font-size: 25pt;
   height: 50px;
+  text-align: left;
 }
 
+.car-price{
+  font-family: 'Overpass', sans-serif;
+  font-size: 15pt;
+  font-weight: 700;
+  text-align: right;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  padding: 4px;
+  color: #38993b;
+  background: rgba(255, 255, 255, .8);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.market-info{
+  margin-top: -50px;
+}
 /*
 -----------------------------------MARKETPLACE SEARCH--------------------------
 */
