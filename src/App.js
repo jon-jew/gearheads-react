@@ -53,7 +53,11 @@ function Explore(){
         <Sidebar />
         <main id="page-wrap">
         <Navbar />
-
+        <div class = "card-container">
+          <ManufacturerCard manu={"ACURA"} />
+          <ManufacturerCard manu={"ACURA"} />
+          <ManufacturerCard manu={"ACURA"} />
+        </div>
         </main>
       </div>
     </div>
@@ -166,6 +170,16 @@ class Navbar extends React.Component{
       </div>
     )
 
+  }
+}
+
+class ManufacturerCard extends React.Component{
+  render(){
+    return(
+      <div class = "manufacturer-card">
+        {this.props.manu}
+      </div>
+    )
   }
 }
 
