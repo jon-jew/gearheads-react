@@ -23,6 +23,7 @@ function marketplace() {
           <div class = "marketplace-title">MARKETPLACE</div>
 
         </div>
+        <MarketCard />
         </main>
       </div>
     </div>
@@ -58,12 +59,27 @@ function Explore(){
   );
 }
 
+function Garage(){
+  return(
+    <div className = "App">
+      <div id="outer-container">
+        <Sidebar />
+        <main id="page-wrap">
+        <Navbar />
+
+        </main>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
         <Route path="/" exact component={Home} />
         <Route path="/marketplace/" exact component={marketplace} />
         <Route path="/explore/" exact component={Explore} />
+        <Route path="/garage/" exact component={Garage} />
     </Router>
   );
 }
