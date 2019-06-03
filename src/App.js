@@ -8,7 +8,7 @@ import GarageTabs from './garage.js'
 
 import './App.css';
 import { push as Menu } from 'react-burger-menu'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 
 
 
@@ -21,10 +21,17 @@ function marketplace() {
         <main id="page-wrap">
         <Navbar />
         <div class = "marketplace-box">
-
-          <div class = "marketplace-title">MARKETPLACE</div>
-
+          <div class = "marketplace-title">
+            MARKETPLACE
+          </div>
         </div>
+        <MarketCard year={"1991"} car={"TOYOTA MR2"} pic={pic} />
+        <MarketCard year={"1991"} car={"TOYOTA MR2"} pic={pic} />
+        <MarketCard year={"1991"} car={"TOYOTA MR2"} pic={pic} />
+        <MarketCard year={"1991"} car={"TOYOTA MR2"} pic={pic} />
+        <MarketCard year={"1991"} car={"TOYOTA MR2"} pic={pic} />
+        <MarketCard year={"1991"} car={"TOYOTA MR2"} pic={pic} />
+        <MarketCard year={"1991"} car={"TOYOTA MR2"} pic={pic} />
         <MarketCard year={"1991"} car={"TOYOTA MR2"} pic={pic} />
         </main>
       </div>
@@ -74,7 +81,7 @@ function Garage(){
         <Sidebar />
         <main id="page-wrap">
         <Navbar />
-
+        <GarageTabs />
         </main>
       </div>
     </div>
@@ -116,10 +123,10 @@ class Sidebar extends React.Component {
   render () {
     return (
       <Menu id = "sidebar" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } styles={ styles }>
-          <Link to="/" id="home" className="menu-item"><i class="list-icon fas fa-home"></i> HOME</Link>
-          <Link to="/marketplace/" id="marketplace" className="menu-item"><i class="list-icon fas fa-coins"></i> MARKETPLACE</Link>
-          <Link to="/explore/" id="explore" className="menu-item"><i class="list-icon fas fa-binoculars"></i> EXPLORE</Link>
-          <Link to="/garage/" id="my-garage" className="menu-item"><i class="list-icon fas fa-warehouse"></i> MY GARAGE</Link>
+          <NavLink to="/" id="home" className="menu-item"><i class="list-icon fas fa-home"></i> HOME</NavLink>
+          <NavLink to="/marketplace/" id="marketplace" className="menu-item" activeStyle={{color: "white"}}><i class="list-icon fas fa-coins"></i> MARKETPLACE</NavLink>
+          <NavLink to="/explore/" id="explore" className="menu-item" activeStyle={{color: "white"}}><i class="list-icon fas fa-binoculars"></i> EXPLORE</NavLink>
+          <NavLink to="/garage/" id="my-garage" className="menu-item" activeStyle={{color: "white"}}><i class="list-icon fas fa-warehouse"></i> MY GARAGE</NavLink>
       </Menu>
     );
   }
@@ -160,7 +167,7 @@ class MarketCard extends React.Component{
         <div class = "car-price">$8000</div>
         <div class = "card-photo"><img class="car-photo" src={this.props.pic}/></div>
         <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}</div>
-        <div class = "market-info car-user "><i class="fas fa-tachometer-alt"></i> 110000 MILES<br /><i class="fas fa-map-marker-alt"></i> LOCATION</div>
+        <div class = "market-info car-user ">110000 MILES <i class="market-icon fas fa-tachometer-alt"></i><br />LOCATION <i class="market-icon fas fa-map-marker-alt"></i></div>
       </div>
     )
   }
@@ -218,7 +225,7 @@ var styles2 = {
     height: '100%'
   },
   bmMenu: {
-    background: '#ada795',
+    background: '#717087',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
     overflow: 'hidden'
@@ -262,7 +269,7 @@ var styles = {
     height: '100%'
   },
   bmMenu: {
-    background: '#ada795',
+    background: '#717087',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
     overflow: 'hidden'

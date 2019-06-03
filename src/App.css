@@ -42,7 +42,7 @@ body{
   position: fixed;
   top: 0;
   z-index: 100;
-  background: #ada795;
+  background: #717087;
 }
 
 #title{
@@ -133,7 +133,7 @@ body{
   padding-top: 10px;
   padding-left: 20px;
   background-color: #565656;
-  color: #ada795;
+  color: #717087;
   font-family: 'Overpass', sans-serif;
   font-weight: 700;
 
@@ -143,9 +143,9 @@ body{
 }
 
 .car-price{
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Major Mono Display', monospace;
   font-size: 15pt;
-  font-weight: 700;
+
   text-align: right;
   position: absolute;
   right: 0px;
@@ -159,6 +159,11 @@ body{
 
 .market-info{
   margin-top: -50px;
+}
+
+.market-icon{
+  width: 15px;
+  padding-left: 2px;
 }
 /*
 -----------------------------------MARKETPLACE SEARCH--------------------------
@@ -187,14 +192,14 @@ input{
 .manufacturer-card{
   font-family: Overpass;
   display: inline-block;
-  margin-left: 10px;
+
   font-weight: 700;
-  background: #ada795;
+  background-color: #565656;
   color:#565656;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100px;
   height: 100px;
-  border-radius: 5px;
+
+  padding: 5px;
   outline: none;
   transition-property: all;
   transition-duration: 0.25s;
@@ -202,5 +207,5 @@ input{
 
 .manufacturer-card:hover{
   width: 105px;
-  background: #c6bfa9;
+  background: #d1cfcf;
 }
