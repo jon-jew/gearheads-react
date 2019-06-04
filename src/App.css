@@ -1,12 +1,11 @@
 body{
-  background-color: #474747;
+  background-color: #111111;
   font-family: Lato;
 }
 
 .App {
   text-align: center;
 }
-
 
 .menu-item{
   font-family: Overpass;
@@ -32,25 +31,28 @@ body{
   width: 10px;
 }
 
-.bmBurgerButton{
-  z-index: 1000;
-}
-
 .navbar{
   width: 100%;
   height: 80px;
   position: fixed;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   top: 0;
   z-index: 100;
-  background: #717087;
+  background: #262626;
 }
 
 #title{
-  color: #474747;
+  color: #c6b495;
   font-family: Pacifico;
+  font-weight: 400;
   font-size: 30pt;
-  font-weight: 200;
-  margin-top: 0px;
+  margin-top: 10px;
+
+}
+
+.welcome{
+  padding-top: 100px;
+  color: #FFF;
 }
 
 /*
@@ -62,12 +64,13 @@ body{
 }
 
 .card{
-  background: #e8e5e5;
-  color: #474747;
+  background: #3a3a3a;
+
+  color: #FFF;
   position: relative;
   border-radius: 10px;
   width: 500px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   display: inline-block;
   margin: 10px;
   outline: none;
@@ -77,14 +80,13 @@ body{
 
 .card:hover{
   width: 510px;
-  background: #d1cfcf;
+  background: #303030;
 }
 
 .card-photo{
   width: 100%;
   border-radius: 10px;
   height: 250px;
-
 }
 
 .car-photo{
@@ -97,9 +99,10 @@ body{
 
 .car-title{
   font-family: 'Overpass', sans-serif;
-  font-weight: 900;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-weight: 700;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-size: 20pt;
   text-align: left;
   line-height: 21px;
@@ -109,11 +112,12 @@ body{
 
 .car-year{
   font-family: 'Overpass', sans-serif;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 .car-user{
   font-family: 'Overpass', sans-serif;
+  font-size: 12pt;
   font-weight: 200;
   text-align: right;
   margin-right: 10px;
@@ -132,8 +136,8 @@ body{
 .marketplace-title{
   padding-top: 10px;
   padding-left: 20px;
-  background-color: #565656;
-  color: #717087;
+
+  color: #c6b495;
   font-family: 'Overpass', sans-serif;
   font-weight: 700;
 
@@ -143,7 +147,7 @@ body{
 }
 
 .car-price{
-  font-family: 'Major Mono Display', monospace;
+  font-family: 'Overpass', sans-serif;
   font-size: 15pt;
 
   text-align: right;

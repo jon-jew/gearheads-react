@@ -46,7 +46,9 @@ function Home() {
         <Sidebar />
         <main id="page-wrap">
         <Navbar />
-
+        <div class = "welcome">
+          Welcome to Gearheads!
+        </div>
         <CarCardContainer />
         </main>
       </div>
@@ -152,8 +154,9 @@ class CarCard extends React.Component{
     return(
       <div class = "card">
         <div class = "card-photo"><img class="car-photo" src={this.props.pic}/></div>
-        <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}</div>
-        <div class = "car-user"><i class="fas fa-user"></i> USERNAME</div>
+        <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}
+          <div class = "car-user"><i class="fas fa-user"></i> USERNAME</div>
+        </div>
       </div>
     )
   }
@@ -208,7 +211,7 @@ var styles2 = {
     top: '25px'
   },
   bmBurgerBars: {
-    background: '#373a47'
+    background: '#16ad7b'
   },
   bmBurgerBarsHover: {
     background: '#a90000'
@@ -225,10 +228,10 @@ var styles2 = {
     height: '100%'
   },
   bmMenu: {
-    background: '#717087',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    background: '#212121'
   },
   bmMorphShape: {
     fill: '#373a47'
@@ -252,7 +255,7 @@ var styles = {
     top: '25px'
   },
   bmBurgerBars: {
-    background: '#373a47'
+    background: '#c6b495'
   },
   bmBurgerBarsHover: {
     background: '#a90000'
@@ -269,10 +272,10 @@ var styles = {
     height: '100%'
   },
   bmMenu: {
-    background: '#717087',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    background: '#212121'
   },
   bmMorphShape: {
     fill: '#373a47'
