@@ -82,8 +82,8 @@ function Garage(){
       <div id="outer-container">
         <Sidebar />
         <main id="page-wrap">
-        <Navbar />
-        <GarageTabs />
+          <Navbar />
+          <GarageTabs />
         </main>
       </div>
     </div>
@@ -96,12 +96,12 @@ function CarPage(){
       <div id="outer-container">
         <Sidebar />
         <main id="page-wrap">
-        <Navbar />
-
+          <Navbar />
+          <CarDisplay year={"2003"} car={"NISSAN 350Z"}/>
         </main>
       </div>
     </div>
-  )
+  );
 }
 
 function App() {
@@ -213,6 +213,18 @@ class ManufacturerCard extends React.Component{
     return(
       <div class = "manufacturer-card">
         {this.props.manu}
+      </div>
+    )
+  }
+}
+
+class CarDisplay extends React.Component{
+  render(){
+    return(
+      <div class = "car-display">
+        <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}
+          <div class = "car-user"><i class="fas fa-user"></i> USERNAME</div>
+        </div>
       </div>
     )
   }
