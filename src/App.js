@@ -90,14 +90,30 @@ function Garage(){
   );
 }
 
+function CarPage(){
+  return(
+    <div className = "App">
+      <div id="outer-container">
+        <Sidebar />
+        <main id="page-wrap">
+        <Navbar />
+
+        </main>
+      </div>
+    </div>
+  )
+}
+
 function App() {
   return (
     <Router>
-        <Route path="/" exact component={Home} />
+        <Route path="/home" exact component={Home} />
         <Route path="/marketplace/" exact component={marketplace} />
         <Route path="/explore/" exact component={Explore} />
         <Route path="/garage/" exact component={Garage} />
+        <Route path="/carpage/" exact component={CarPage} />
     </Router>
+
   );
 }
 
@@ -125,10 +141,10 @@ class Sidebar extends React.Component {
   render () {
     return (
       <Menu id = "sidebar" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } styles={ styles }>
-          <NavLink to="/" id="home" className="menu-item"><i class="list-icon fas fa-home"></i> HOME</NavLink>
-          <NavLink to="/marketplace/" id="marketplace" className="menu-item" activeStyle={{color: "white"}}><i class="list-icon fas fa-coins"></i> MARKETPLACE</NavLink>
-          <NavLink to="/explore/" id="explore" className="menu-item" activeStyle={{color: "white"}}><i class="list-icon fas fa-binoculars"></i> EXPLORE</NavLink>
-          <NavLink to="/garage/" id="my-garage" className="menu-item" activeStyle={{color: "white"}}><i class="list-icon fas fa-warehouse"></i> MY GARAGE</NavLink>
+          <NavLink to="/home" id="home" className="menu-item" activeStyle={{color: "#c6b495"}} ><i class="list-icon fas fa-home"></i> HOME</NavLink>
+          <NavLink to="/marketplace/" id="marketplace" className="menu-item" activeStyle={{color: "#c6b495"}}><i class="list-icon fas fa-coins"></i> MARKETPLACE</NavLink>
+          <NavLink to="/explore/" id="explore" className="menu-item" activeStyle={{color: "#c6b495"}}><i class="list-icon fas fa-binoculars"></i> EXPLORE</NavLink>
+          <NavLink to="/garage/" id="my-garage" className="menu-item" activeStyle={{color: "#c6b495"}}><i class="list-icon fas fa-warehouse"></i> MY GARAGE</NavLink>
       </Menu>
     );
   }
@@ -152,15 +168,19 @@ class CarCard extends React.Component{
 
   render(){
     return(
-      <div class = "card">
+      <Link to="/carpage" className="card">
+
         <div class = "card-photo"><img class="car-photo" src={this.props.pic}/></div>
         <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}
           <div class = "car-user"><i class="fas fa-user"></i> USERNAME</div>
         </div>
-      </div>
+
+      </Link>
     )
   }
 }
+
+
 
 class MarketCard extends React.Component{
 
@@ -265,7 +285,7 @@ var styles = {
     width: '24px'
   },
   bmCross: {
-    background: '#bdc3c7'
+    background: '#c6b495'
   },
   bmMenuWrap: {
     position: 'fixed',
