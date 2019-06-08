@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
+    "express": "^4.17.1",
     "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.0",
@@ -30,5 +30,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
