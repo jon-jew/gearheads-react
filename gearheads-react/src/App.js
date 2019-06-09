@@ -46,7 +46,9 @@ function Home() {
         <Sidebar />
         <main id="page-wrap">
         <Navbar />
-
+        <div class = "welcome">
+          Welcome to Gearheads!
+        </div>
         <CarCardContainer />
         </main>
       </div>
@@ -80,8 +82,22 @@ function Garage(){
       <div id="outer-container">
         <Sidebar />
         <main id="page-wrap">
-        <Navbar />
-        <GarageTabs />
+          <Navbar />
+          <GarageTabs />
+        </main>
+      </div>
+    </div>
+  );
+}
+
+function CarPage(){
+  return(
+    <div className = "App">
+      <div id="outer-container">
+        <Sidebar />
+        <main id="page-wrap">
+          <Navbar />
+          <CarDisplay year={"2003"} car={"NISSAN 350Z"}/>
         </main>
       </div>
     </div>
@@ -91,11 +107,13 @@ function Garage(){
 function App() {
   return (
     <Router>
-        <Route path="/" exact component={Home} />
+        <Route path="/home" exact component={Home} />
         <Route path="/marketplace/" exact component={marketplace} />
         <Route path="/explore/" exact component={Explore} />
         <Route path="/garage/" exact component={Garage} />
+        <Route path="/carpage/" exact component={CarPage} />
     </Router>
+
   );
 }
 
@@ -123,10 +141,10 @@ class Sidebar extends React.Component {
   render () {
     return (
       <Menu id = "sidebar" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } styles={ styles }>
-          <NavLink to="/" id="home" className="menu-item"><i class="list-icon fas fa-home"></i> HOME</NavLink>
-          <NavLink to="/marketplace/" id="marketplace" className="menu-item" activeStyle={{color: "white"}}><i class="list-icon fas fa-coins"></i> MARKETPLACE</NavLink>
-          <NavLink to="/explore/" id="explore" className="menu-item" activeStyle={{color: "white"}}><i class="list-icon fas fa-binoculars"></i> EXPLORE</NavLink>
-          <NavLink to="/garage/" id="my-garage" className="menu-item" activeStyle={{color: "white"}}><i class="list-icon fas fa-warehouse"></i> MY GARAGE</NavLink>
+          <NavLink to="/home" id="home" className="menu-item" activeStyle={{color: "#c6b495"}} ><i class="list-icon fas fa-home"></i> HOME</NavLink>
+          <NavLink to="/marketplace/" id="marketplace" className="menu-item" activeStyle={{color: "#c6b495"}}><i class="list-icon fas fa-coins"></i> MARKETPLACE</NavLink>
+          <NavLink to="/explore/" id="explore" className="menu-item" activeStyle={{color: "#c6b495"}}><i class="list-icon fas fa-binoculars"></i> EXPLORE</NavLink>
+          <NavLink to="/garage/" id="my-garage" className="menu-item" activeStyle={{color: "#c6b495"}}><i class="list-icon fas fa-warehouse"></i> MY GARAGE</NavLink>
       </Menu>
     );
   }
@@ -150,14 +168,19 @@ class CarCard extends React.Component{
 
   render(){
     return(
-      <div class = "card">
+      <Link to="/carpage" className="card">
+
         <div class = "card-photo"><img class="car-photo" src={this.props.pic}/></div>
-        <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}</div>
-        <div class = "car-user"><i class="fas fa-user"></i> USERNAME</div>
-      </div>
+        <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}
+          <div class = "car-user"><i class="fas fa-user"></i> USERNAME</div>
+        </div>
+
+      </Link>
     )
   }
 }
+
+
 
 class MarketCard extends React.Component{
 
@@ -195,6 +218,18 @@ class ManufacturerCard extends React.Component{
   }
 }
 
+class CarDisplay extends React.Component{
+  render(){
+    return(
+      <div class = "car-display">
+        <div class = "car-title"><span class = "car-year">{this.props.year}</span><br />{this.props.car}
+          <div class = "car-user"><i class="fas fa-user"></i> USERNAME</div>
+        </div>
+      </div>
+    )
+  }
+}
+
 
 
 export default App;
@@ -208,7 +243,7 @@ var styles2 = {
     top: '25px'
   },
   bmBurgerBars: {
-    background: '#373a47'
+    background: '#16ad7b'
   },
   bmBurgerBarsHover: {
     background: '#a90000'
@@ -225,10 +260,10 @@ var styles2 = {
     height: '100%'
   },
   bmMenu: {
-    background: '#717087',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    background: '#212121'
   },
   bmMorphShape: {
     fill: '#373a47'
@@ -252,7 +287,7 @@ var styles = {
     top: '25px'
   },
   bmBurgerBars: {
-    background: '#373a47'
+    background: '#c6b495'
   },
   bmBurgerBarsHover: {
     background: '#a90000'
@@ -262,17 +297,17 @@ var styles = {
     width: '24px'
   },
   bmCross: {
-    background: '#bdc3c7'
+    background: '#c6b495'
   },
   bmMenuWrap: {
     position: 'fixed',
     height: '100%'
   },
   bmMenu: {
-    background: '#717087',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    background: '#212121'
   },
   bmMorphShape: {
     fill: '#373a47'
