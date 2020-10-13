@@ -1,0 +1,646 @@
+
+body{
+  background-color: rgb(231, 231, 231);
+  font-family: Overpass;
+  height: 100%;
+}
+
+p{
+  font-family: Lato;
+}
+.App {
+  text-align: center;
+}
+#sidebar{
+  z-index: 1000000;
+}
+
+.menu-item{
+  font-family: Overpass;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 1px;
+  color: #474747;
+  text-decoration: none;
+  margin-top: 15px;
+  outline: none;
+  transition-property: color;
+  transition-property: font-size;
+  transition-duration: 0.25s;
+}
+
+.menu-item:hover{
+  color: #c6b495;
+  font-size: 15pt;
+}
+
+.list-icon{
+  margin-right: 20px;
+  width: 10px;
+}
+
+.navbar{
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 900;
+  background: #111111;
+}
+.navbar-home{
+
+  height: 165px;
+
+}
+
+.navbar-items{
+  display: inline-block;
+}
+
+#navbar-login{
+  text-decoration: none;
+  font-family: Overpass;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 1px;
+  color: #FFF;
+  position: absolute;
+  right: 100px;
+  top: 30px;
+}
+
+.title {
+  margin-top: 20px;
+}
+
+#gear{
+  color: #FFF;
+  background: rgb(105, 33, 21);
+  font-family: Overpass;
+  font-weight: 200;
+  font-size: 20pt;
+  margin-top: 0px;
+  margin-right: 5px;
+  padding: 10px 7px;
+  border-right: solid 2px #FFF;
+}
+
+#heads{
+  font-family: Overpass;
+  color: #FFF;
+  font-weight: 900;
+  font-size: 20pt;
+}
+
+.welcome{
+  padding-top: 180px;
+  color: #FFF;
+}
+
+.searchbar{
+  font-family: Overpass;
+  font-size: 20px;
+  background: none;
+  color: #2b2b2b;
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.searchbar-container{
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  background: #DBDBDB;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+.search-btn{
+  position: absolute;
+  right: 13%;
+  top: 116px;
+  width: 10px;
+  background: none;
+  border: 0;
+}
+/*
+-----------------------------------CAR CARD--------------------------
+*/
+
+.card-container{
+  padding-top: 30px;
+}
+
+.card{
+  background: #3a3a3a;
+  text-decoration: none;
+  color: #FFF;
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  width: 500px;
+  display: inline-block;
+  margin: 10px;
+  outline: none;
+  transition-property: all;
+  transition-duration: 0.25s;
+  border-bottom-style: solid;
+  border-color: #FFF;
+  border-width: 5px;
+   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-overlay{
+  top: 0px;
+  position: absolute;
+  z-index: 100;
+  background: linear-gradient(to bottom, transparent,80%, #000);
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+
+.card-photo{
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.card:hover .card-photo{
+  transform: scale(1.1);
+}
+
+
+.car-title{
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20pt;
+  text-align: left;
+  line-height: 21px;
+  padding-left: 10px;
+
+}
+
+.car-overlay-title{
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+  padding-top: 250px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  font-size: 20pt;
+  text-align: left;
+  line-height: 21px;
+}
+
+.car-year{
+  font-family: 'Overpass', sans-serif;
+  font-weight: 100;
+}
+
+.car-user{
+  font-family: 'Overpass', sans-serif;
+  font-size: 12pt;
+  font-weight: 200;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: -25px;
+}
+
+.card-like{
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s;
+  color: #FFF;
+  z-index: 1;
+  font-size:20px;
+}
+
+.card:hover .card-like{
+  opacity: 1;
+}
+
+/*
+-----------------------------------MARKETPLACE--------------------------
+*/
+.marketplace-box{
+  padding-top: 90px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.marketplace-title{
+  padding-top: 10px;
+  padding-left: 20px;
+
+  color: #c6b495;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+
+  font-size: 25pt;
+  height: 50px;
+  text-align: left;
+}
+
+.car-price{
+  font-family: 'Overpass', sans-serif;
+  font-size: 15pt;
+
+  text-align: right;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  padding: 4px;
+  color: #38993b;
+  background: rgba(255, 255, 255, .8);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.market-info{
+  margin-top: -50px;
+}
+
+.market-icon{
+  width: 15px;
+  padding-left: 2px;
+}
+/*
+-----------------------------------MARKETPLACE SEARCH--------------------------
+*/
+
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+}
+
+.market-searchbox{
+  font-family: Overpass;
+  width: 80%;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px;
+  background-color: #565656;
+  color: #FFF;
+}
+
+/*
+-----------------------------------EXPLORE--------------------------
+*/
+
+.manufacturer-card{
+  font-family: Overpass;
+  display: inline-block;
+
+  font-weight: 700;
+  background-color: #565656;
+  color:#565656;
+  width: 100px;
+  height: 100px;
+
+  padding: 5px;
+  outline: none;
+  transition-property: all;
+  transition-duration: 0.25s;
+}
+
+.manufacturer-card:hover{
+  width: 105px;
+  background: #d1cfcf;
+}
+
+/*
+-----------------------------------CAR PAGE--------------------------
+*/
+.car-display{
+  margin-top: 100px;
+}
+
+.car-header{
+  margin-top: 80px;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+.car-header-overlay{
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 20vh;
+  font-family: Overpass;
+  color: #FFF;
+  font-weight: 700;
+  text-align: center;
+  font-size: 8vw;
+}
+
+
+.car-header-year{
+  font-weight: 200;
+  height: 7vw;
+  
+}
+
+.car-header-model{
+
+  line-height: 7vw;
+  padding-top: 10px;
+}
+
+.car-header-user{
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.car-header-engine{
+  padding-top: 30px;
+}
+
+.car-header-text{
+  margin: auto;
+  margin-top: 20px;
+  width: 50vw;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.header-photo-container{
+  margin-top: 80px;
+  z-index: 10;
+  height: calc(100vh - 80px);
+  min-height: 650px;
+}
+
+.header-photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.test{
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.car-footer {
+  height: calc(100vh - 80px);
+  background: #333333;
+  color: #FFF;
+}
+
+.left-footer {
+  float: left;
+  overflow: scroll;
+  overflow-x: hidden;
+  text-align: right;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #818181;
+  height: calc(100vh - 80px);
+  width: 500px;
+}
+
+.left-footer::-webkit-scrollbar {
+  display: none;
+}
+
+.left-header {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 50px;
+  padding-left: 0px;
+  line-height: 50px;
+  /* border-left: solid 5px rgb(105, 33, 21); */
+}
+
+.footer-user {
+  font-size: 20px;
+}
+
+.right-footer{
+  color: #000;
+  float: right;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: #FFF;
+  text-align: center;
+  width: calc(100% - 600px);
+  height: calc(100vh - 80px);
+}
+
+.right-footer::-webkit-scrollbar {
+  display: none;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.picture-exp-small {
+  display: inline-block;
+  background: rgb(212, 212, 212);
+  width: 300px;
+  height: 300px;
+  margin: 15px;
+  transition: all 0.25s ease;
+
+}
+
+.picture-exp-large {
+  display: inline-block;
+  background: rgb(212, 212, 212);
+  width: 800px;
+  height: 800px;
+  margin: 15px;
+  transition: all 0.25s ease;
+
+}
+
+.month {
+  width: 100%;
+}
+.timeline-header{
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.timeline {
+  float: left;
+  font-size: 20px;
+  text-align: left;
+  padding: 15px;
+  width: 50px;
+  border-right: solid 5px rgb(105, 33, 21);
+}
+
+.timeline-container {
+  float: left;
+}
+
+.picture-container{
+  float: right;
+  width: calc(100% - 85px);
+}
+
+.car-header-container{
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.header-button-container{
+  background: rgba(0,0,0,0.2);
+
+  padding: 10px;
+  padding-top: 15px;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+}
+
+.header-button{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-left: 25px;
+  font-size: 3vw;
+  color: #FFF;
+  transition: all 0.25s ease;
+}
+
+.header-button:hover{
+  color: #a8a8a8;
+}
+
+@media screen and (max-width: 700px) {
+
+  .header-button {
+     font-size: 25px;
+     right: 10px;
+  }
+
+
+}
+@media screen and (min-width: 1000px) {
+  .header-button {
+     font-size: 50px;
+  }
+
+}
+
+.down-button{
+  position: absolute;
+  bottom: 20px;
+  color: #FFF;
+  font-size: 50px;
+  transition: all 0.25s ease;
+}
+
+.down-button:hover{
+  color: rgb(105, 33, 21);
+}
+
+.left{
+  left: 30px;
+}
+
+.right{
+  right: 30px;
+}
+
+#specs{
+  margin-left: 0px;
+}
+
+
+
+.top-buttons{
+  padding: 10px;
+  position: fixed;
+  top: 100px;
+  z-index: 1000;
+  right: 60px;
+}
+
+.like-button{
+  float: right;
+  margin-top: 10px;
+  font-size: 2vw;
+  transition: all 0.25s ease;
+}
+
+.heart-color {
+  color: #ba6666 !important;
+}
+
+.follow-button{
+  margin-top: 10px;
+  padding: 10px;
+  background: #262626;
+  color: #FFF;
+}
+/*
+
+-----------------------------------Buttons--------------------------
+*/
+
+.button{
+  font-family: Overpass;
+  font-weight: 300;
+  width: 100px;
+  background: #c6b495;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  transition-property: background;
+  transition-duration: 0.25s;
+}
+
+.button:hover{
+  background: #e3ceaa;
+}
+
+/*
+
+-----------------------------------LOGIN FORM--------------------------
+*/
+.login-form{
+  padding-top: 200px;
+}
+
+input:focus{
+  outline:0;
+}
+
+.login-input{
+  font-family: Overpass;
+  background: none;
+  border-bottom-color: #c6b495;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  color: #FFF;
+  width: 300px;
+  height: 30px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}

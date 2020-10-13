@@ -1,23 +1,34 @@
-const express = require('express');
+import * as admin from 'firebase-admin';
+import firebaseAuth from "firebase-auth";
+import functions from "firebase-functions";
+
+import express from 'express';
 const app = express();
 
-const admin = require('firebase-admin');
-const serviceAccount = require("../config/serviceAccountKey.json");
+import serviceAccount from "../config/serviceKey.js/index.js";
 
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import bodyParser from 'body-parser';
+import cors from 'cors';
 
 const port = 3000;
+
+var firebaseConfig = {
+    apiKey: "AIzaSyDsizKaXLvrs8OaSYiAH7_XeAaswr8Ttzc",
+    authDomain: "gearheads-54e35.firebaseapp.com",
+    databaseURL: "https://gearheads-54e35.firebaseio.com",
+    projectId: "gearheads-54e35",
+    storageBucket: "gearheads-54e35.appspot.com",
+    messagingSenderId: "318717218085",
+    appId: "1:318717218085:web:817968dc2375f7087a1ecc",
+    measurementId: "G-40QKBL6S2X"
+};
+// Initialize Firebase
+admin.initializeApp(firebaseConfig);
+//firebaseAdmin.analytics();
 
 // middleware
 app.use(bodyParser.json({ extended: true}));
 app.use(cors());
-
-// connect to firebase
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://gearheads-1529515255083.firebaseio.com"
-});
 
 const db = admin.firestore();
 
