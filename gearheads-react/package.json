@@ -9,7 +9,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.10",
-    "react-dev-utils": "^9.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.8.6",
     "react-images": "^1.0.0",
     "react-photo-gallery": "^8.0.0",
